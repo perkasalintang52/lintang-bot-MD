@@ -34,7 +34,7 @@ background: 'transparent',
 letterSpacing: 1,
 space: true,
 });
-console.log('Author  : Thadz BotZ');
+console.log('Author  : LINTANG BOT');
 console.log('GitHub  : http://github.com/thadz');
 console.log('Library : @adiwajshing/baileys-md');
 console.log('\n\n');
