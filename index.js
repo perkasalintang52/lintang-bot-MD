@@ -20,7 +20,7 @@ try {
 const list = "⇝";
 const type = Object.keys(msg.message)[0];
 const body = (type === 'conversation') ? msg.message.conversation : (type == 'imageMessage') ? msg.message.imageMessage.caption : (type == 'videoMessage') ? msg.message.videoMessage.caption : (type == 'extendedTextMessage') ? msg.message.extendedTextMessage.text : (type == 'buttonsResponseMessage') ? msg.message.buttonsResponseMessage.selectedButtonId : (type == 'listResponseMessage') ? msg.message.listResponseMessage.singleSelectReply.selectedRowId : (type == 'templateButtonReplyMessage') ? msg.message.templateButtonReplyMessage.selectedId : (type === 'messageContextInfo') ? (msg.message.buttonsResponseMessage?.selectedButtonId || msg.message.listResponseMessage?.singleSelectReply.selectedRowId || msg.text) : ''
-const prefix = /^[./~!#%^&=\,;:()z]/.test(body) ? body.match(/^[./~!#%^&=\,;:()z]/gi) : '#';
+const prefix = /^[./~!#%^&=\,;:()z]/.test(body) ? body.match(/^[./~!#%^&=\,;:()z]/gi) : '';
 const isCommand = body.startsWith(prefix);
 const cmd = isCommand ? body.slice(1).trim().split(/ +/).shift().toLowerCase() : null;
 const time = moment(new Date()).format("HH:mm");
@@ -270,7 +270,7 @@ const buttons = [
 const buttonMessage = {
     image: { url: './src/menu.jpg' },
     caption: help(list, prefix, pushname),
-    footer: `© ByThadzBotZ`,
+    footer: `© By LINTANG BOT`,
     buttons: buttons,
     headerType: 4
 }
